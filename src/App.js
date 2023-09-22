@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Page from "./Page.js";
+import Header from "./Header.js";
 
-function App() {
+export default function App() {
+  // States to store app information
+  const [currentPage, setCurrentPage] = useState('list');
+  const [darkMode, setDarkMode] = useState(true);
+  const [language, setLanguage] = useState('us');
+
+  // Handles the change listPage/objectPage
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
+  // Handles the change to darkmode
+  // TO-DO
+  const handleDarkModeChange = (mode) => {
+    setDarkMode(!mode);
+    console.log('Darkmode: ' + mode);
+  }
+
+  // Handles the language change
+  // TO-DO
+  const handleLanguageChange = (language) => {
+    setLanguage(language);
+    console.log('Language: ' + language);
+  }
+
+  // Returns the App
+  //    Header component (Logo, Darkmode, Language)
+  //    Page component (Pagecontent)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header onPageChange={handlePageChange} currentDarkMode={darkMode} onDarkModeChange={ handleDarkModeChange } onLanguageChange={ handleLanguageChange } />
+      <Page currentPage={currentPage} handlePageChange={handlePageChange} />
+    </>
   );
 }
-
-export default App;

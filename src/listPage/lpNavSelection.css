@@ -1,0 +1,21 @@
+button:link,
+button:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+button:hover .card-title,
+button:focus .card-title {
+  text-decoration: underline;
+  color: green;
+}
+
+.nav-link {
+  color: green;
+  font-weight: bold;
+}
+
+:root,
+[data-bs-theme="light"] {
+  --bs-link-hover-color: green;
+}

@@ -1,0 +1,58 @@
+.card {
+  height: auto;
+}
+
+.difficulty .fas {
+  color: green;
+}
+
+.difficulty {
+  display: flex;
+}
+
+#lblSpoons {
+  text-align: right;
+}
+
+#lbltotalTimeValue {
+  text-align: right;
+}
+
+.custom-padding {
+  padding: 0 2vw 0 0;
+}
+
+.custom-margin-card {
+  width: 400px;
+  height: auto;
+  padding: 10px;
+  border-radius: 5%;
+  margin: 50px auto;
+}
+
+.card-img-top {
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 5%;
+}
+
+.card-title {
+  text-align: center;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover .card-title,
+a:focus .card-title {
+  text-decoration: underline;
+  color: green;
+}
+
+a {
+  cursor: pointer;
+}
